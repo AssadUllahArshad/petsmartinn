@@ -1,0 +1,473 @@
+{
+  "routes": [
+    {
+      "width": 1440,
+      "path": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/dogs",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/cats",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/dogs/harnesses",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/product/everyday-adventure-harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/buying-guides/choosing-an-everyday-dog-harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/dog-breeds",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/cat-breeds",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/pet-health",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/search?q=harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/brands",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/dogs",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/cats",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/dogs/harnesses",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/product/everyday-adventure-harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/buying-guides/choosing-an-everyday-dog-harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/dog-breeds",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/cat-breeds",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/pet-health",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/search?q=harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 390,
+      "path": "/brands",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/dogs",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/cats",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/dogs/harnesses",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/product/everyday-adventure-harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/buying-guides/choosing-an-everyday-dog-harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/dog-breeds",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/cat-breeds",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/pet-health",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/search?q=harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 768,
+      "path": "/brands",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/dogs",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/cats",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/dogs/harnesses",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/product/everyday-adventure-harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/buying-guides/choosing-an-everyday-dog-harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/dog-breeds",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/cat-breeds",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/pet-health",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/search?q=harness",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 320,
+      "path": "/brands",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "illustrations": []
+    },
+    {
+      "width": 1440,
+      "path": "/dog-breeds/retail-layout-dog",
+      "status": 200,
+      "fixture": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "path": "/dog-breeds/retail-layout-dog",
+      "status": 200,
+      "fixture": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "path": "/cat-breeds/retail-layout-cat",
+      "status": 200,
+      "fixture": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "path": "/cat-breeds/retail-layout-cat",
+      "status": 200,
+      "fixture": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "path": "/pet-health/dogs/retail-layout-health",
+      "status": 200,
+      "fixture": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "path": "/pet-health/dogs/retail-layout-health",
+      "status": 200,
+      "fixture": true,
+      "overflow": false
+    },
+    {
+      "path": "/dog-breeds/newfoundland-dog",
+      "status": 200,
+      "notFound": true,
+      "draftProtected": true,
+      "note": "Next.js streams the existing not-found UI with noindex after headers begin."
+    },
+    {
+      "path": "/pet-health/dogs/kennel-cough",
+      "status": 200,
+      "notFound": true,
+      "draftProtected": true,
+      "note": "Next.js streams the existing not-found UI with noindex after headers begin."
+    }
+  ],
+  "interactions": [
+    {
+      "width": 1440,
+      "filters": "valid 20–100 price range passed"
+    },
+    {
+      "width": 1440,
+      "gallery": "passed"
+    },
+    {
+      "width": 390,
+      "filters": "valid 20–100 price range passed"
+    },
+    {
+      "width": 390,
+      "gallery": "passed"
+    },
+    {
+      "width": 390,
+      "mobileNavigation": "passed"
+    },
+    {
+      "width": 768,
+      "filters": "valid 20–100 price range passed"
+    },
+    {
+      "width": 768,
+      "gallery": "passed"
+    },
+    {
+      "width": 320,
+      "filters": "valid 20–100 price range passed"
+    },
+    {
+      "width": 320,
+      "gallery": "passed"
+    },
+    {
+      "width": 320,
+      "mobileNavigation": "passed"
+    }
+  ],
+  "errors": [],
+  "before": {
+    "products": 8,
+    "categories": 15,
+    "brands": 3,
+    "content": 14,
+    "authors": 0,
+    "adminUsers": 1
+  },
+  "after": {
+    "products": 8,
+    "categories": 15,
+    "brands": 3,
+    "content": 14,
+    "authors": 0,
+    "adminUsers": 1
+  },
+  "complete": true,
+  "existingPriceFilterIssue": "A blank price bound is parsed as zero by the unchanged catalog query parser."
+}

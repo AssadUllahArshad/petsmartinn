@@ -1,0 +1,410 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Status {
+  DRAFT
+  NEEDS_REVIEW
+  REVIEWED
+  PUBLISHED
+}
+
+enum ContentType {
+  BUYING_GUIDE
+  DOG_BREED
+  CAT_BREED
+  HEALTH
+  BLOG
+  PAGE
+}
+
+enum Role {
+  OWNER
+  EDITOR
+}
+
+model AdminUser {
+  id           String     @id @default(cuid())
+  email        String     @unique
+  name         String
+  passwordHash String
+  role         Role       @default(EDITOR)
+  active       Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  audits       AuditLog[]
+}
+
+model Author {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  bio         String    @default("")
+  image       String?
+  jobTitle    String?
+  credentials String?
+  expertise   String[]  @default([])
+  socialLinks Json      @default("{}")
+  type        String    @default("Editorial")
+  articles    Content[] @relation("Authored")
+  reviewed    Content[] @relation("Reviewed")
+}
+
+model Product {
+  id                         String            @id @default(cuid())
+  title                      String
+  slug                       String            @unique
+  sku                        String?           @unique
+  brandId                    String?
+  brand                      Brand?            @relation(fields: [brandId], references: [id], onDelete: SetNull)
+  shortDescription           String            @default("")
+  description                String            @default("")
+  features                   String[]          @default([])
+  pros                       String[]          @default([])
+  cons                       String[]          @default([])
+  bestFor                    String            @default("")
+  notIdealFor                String            @default("")
+  mainImage                  String            @default("/images/product-harness.svg")
+  imageAlt                   String            @default("")
+  price                      Decimal?          @db.Decimal(10, 2)
+  oldPrice                   Decimal?          @db.Decimal(10, 2)
+  currency                   String            @default("USD")
+  rating                     Float?
+  reviewCount                Int?
+  badge                      String?
+  featured                   Boolean           @default(false)
+  status                     Status            @default(DRAFT)
+  source                     String            @default("MANUAL")
+  amazonTitleManaged         Boolean           @default(false)
+  amazonAsin                 String?           @unique
+  amazonMarketplace          String?
+  amazonProductUrl           String?
+  amazonAffiliateUrl         String?
+  amazonCategory             String?
+  amazonCommissionRate       Float?
+  estimatedCommissionPerSale Decimal?          @db.Decimal(12, 4)
+  amazonCommissionSource     String?
+  amazonLastSyncAt           DateTime?
+  amazonExpiresAt            DateTime?
+  amazonSyncStatus           String?
+  amazonAvailability         String?
+  amazonBrandName            String?
+  amazonOpportunityScore     Float?
+  amazonManagedFields        Json              @default("[\"price\",\"availability\",\"images\",\"brand\"]")
+  affiliateClicks            Int?
+  outboundCtr                Float?
+  observedConversionRate     Float?
+  observedEarnings           Decimal?          @db.Decimal(14, 4)
+  earningsPerClick           Decimal?          @db.Decimal(14, 6)
+  performanceSource          String?
+  performanceMeasuredAt      DateTime?
+  performanceWindowStart     DateTime?
+  performanceWindowEnd       DateTime?
+  merchant                   String            @default("Amazon")
+  affiliateUrl               String
+  buttonText                 String            @default("Shop Now")
+  openNewTab                 Boolean           @default(true)
+  trackClicks                Boolean           @default(true)
+  affiliateDisclosure        String            @default("")
+  isDemo                     Boolean           @default(false)
+  publishedAt                DateTime?
+  createdAt                  DateTime          @default(now())
+  updatedAt                  DateTime          @updatedAt
+  seo                        Json              @default("{}")
+  aeo                        Json              @default("{}")
+  images                     ProductImage[]
+  categories                 ProductCategory[]
+  clicks                     AffiliateClick[]
+  recommendations            ContentProduct[]
+  relatedFrom                ProductRelation[] @relation("ProductFrom")
+  relatedTo                  ProductRelation[] @relation("ProductTo")
+
+  @@index([status, featured, createdAt])
+  @@index([brandId])
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  alt       String
+  order     Int     @default(0)
+}
+
+model ProductRelation {
+  fromId String
+  toId   String
+  from   Product @relation("ProductFrom", fields: [fromId], references: [id], onDelete: Cascade)
+  to     Product @relation("ProductTo", fields: [toId], references: [id], onDelete: Cascade)
+
+  @@id([fromId, toId])
+}
+
+model Category {
+  id        String            @id @default(cuid())
+  name      String
+  slug      String            @unique
+  path      String            @unique
+  parentId  String?
+  parent    Category?         @relation("CategoryTree", fields: [parentId], references: [id], onDelete: Restrict)
+  children  Category[]        @relation("CategoryTree")
+  image     String            @default("/images/product-harness.svg")
+  icon      String            @default("paw")
+  intro     String            @default("")
+  body      String            @default("")
+  featured  Boolean           @default(false)
+  status    Status            @default(DRAFT)
+  order     Int               @default(0)
+  seo       Json              @default("{}")
+  aeo       Json              @default("{}")
+  products  ProductCategory[]
+  content   ContentCategory[]
+  updatedAt DateTime          @updatedAt
+}
+
+model ProductCategory {
+  productId  String
+  categoryId String
+  primary    Boolean  @default(false)
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  @@id([productId, categoryId])
+  @@index([categoryId])
+}
+
+model Brand {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  logo        String?
+  description String    @default("")
+  body        String    @default("")
+  featured    Boolean   @default(false)
+  status      Status    @default(DRAFT)
+  seo         Json      @default("{}")
+  aeo         Json      @default("{}")
+  products    Product[]
+  updatedAt   DateTime  @updatedAt
+}
+
+model Content {
+  id               String            @id @default(cuid())
+  type             ContentType
+  title            String
+  slug             String
+  species          String            @default("dogs")
+  excerpt          String            @default("")
+  image            String?
+  imageAlt         String            @default("")
+  blocks           Json              @default("[]")
+  specialized      Json              @default("{}")
+  seo              Json              @default("{}")
+  aeo              Json              @default("{}")
+  tags             String[]          @default([])
+  authorId         String?
+  author           Author?           @relation("Authored", fields: [authorId], references: [id], onDelete: SetNull)
+  reviewerId       String?
+  reviewer         Author?           @relation("Reviewed", fields: [reviewerId], references: [id], onDelete: SetNull)
+  reviewedAt       DateTime?
+  emergencyWarning String            @default("")
+  disclaimer       String            @default("")
+  status           Status            @default(DRAFT)
+  publishedAt      DateTime?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  sources          SourceReference[]
+  faqs             FAQItem[]
+  products         ContentProduct[]
+  categories       ContentCategory[]
+  relatedFrom      RelatedContent[]  @relation("ContentFrom")
+  relatedTo        RelatedContent[]  @relation("ContentTo")
+
+  @@unique([type, slug])
+  @@index([type, status, publishedAt])
+}
+
+model ContentProduct {
+  contentId String
+  productId String
+  label     String  @default("")
+  order     Int     @default(0)
+  content   Content @relation(fields: [contentId], references: [id], onDelete: Cascade)
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@id([contentId, productId])
+}
+
+model ContentCategory {
+  contentId  String
+  categoryId String
+  content    Content  @relation(fields: [contentId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  @@id([contentId, categoryId])
+}
+
+model RelatedContent {
+  fromId String
+  toId   String
+  from   Content @relation("ContentFrom", fields: [fromId], references: [id], onDelete: Cascade)
+  to     Content @relation("ContentTo", fields: [toId], references: [id], onDelete: Cascade)
+
+  @@id([fromId, toId])
+}
+
+model FAQItem {
+  id        String  @id @default(cuid())
+  contentId String
+  content   Content @relation(fields: [contentId], references: [id], onDelete: Cascade)
+  question  String
+  answer    String
+  order     Int     @default(0)
+}
+
+model SourceReference {
+  id         String    @id @default(cuid())
+  contentId  String
+  content    Content   @relation(fields: [contentId], references: [id], onDelete: Cascade)
+  title      String
+  url        String
+  accessedAt DateTime?
+}
+
+model AffiliateClick {
+  id            String   @id @default(cuid())
+  productId     String?
+  product       Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  productTitle  String
+  categoryNames String[] @default([])
+  brandName     String?
+  merchant      String
+  sourcePage    String?
+  referrer      String?
+  campaign      String?
+  utmSource     String?
+  utmMedium     String?
+  utmCampaign   String?
+  device        String?
+  createdAt     DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([productId, createdAt])
+}
+
+model Media {
+  id         String   @id @default(cuid())
+  filename   String
+  url        String   @unique
+  storageKey String   @unique
+  mimeType   String
+  alt        String   @default("")
+  caption    String   @default("")
+  title      String   @default("")
+  width      Int
+  height     Int
+  bytes      Int
+  createdAt  DateTime @default(now())
+}
+
+model NavigationItem {
+  id       String           @id @default(cuid())
+  label    String
+  href     String
+  location String           @default("header")
+  parentId String?
+  parent   NavigationItem?  @relation("NavigationTree", fields: [parentId], references: [id], onDelete: Restrict)
+  children NavigationItem[] @relation("NavigationTree")
+  order    Int              @default(0)
+  visible  Boolean          @default(true)
+}
+
+model SiteSetting {
+  key       String   @id
+  value     Json
+  updatedAt DateTime @updatedAt
+}
+
+model AuditLog {
+  id        String     @id @default(cuid())
+  adminId   String?
+  admin     AdminUser? @relation(fields: [adminId], references: [id], onDelete: SetNull)
+  action    String
+  entity    String
+  entityId  String?
+  detail    String?
+  createdAt DateTime   @default(now())
+
+  @@index([createdAt])
+}
+
+model RateLimit {
+  key       String   @id
+  count     Int      @default(1)
+  expiresAt DateTime
+
+  @@index([expiresAt])
+}
+
+model AmazonImportRule {
+  id                   String    @id @default(cuid())
+  categoryId           String
+  marketplace          String
+  searchIndex          String    @default("PetSupplies")
+  browseNodeId         String?
+  exactTerms           String[]
+  excludedTerms        String[]  @default([])
+  fallbacks            Json      @default("[]")
+  commissionRate       Float?
+  commissionSource     String?
+  commissionVerifiedAt DateTime?
+  commissionValidUntil DateTime?
+  syncFields           String[]  @default(["price", "availability", "images", "brand"])
+  updatedAt            DateTime  @updatedAt
+
+  @@unique([categoryId, marketplace])
+}
+
+model AmazonSearchBatch {
+  id          String   @id @default(cuid())
+  adminId     String
+  categoryId  String
+  marketplace String
+  mock        Boolean
+  query       Json
+  results     Json
+  createdAt   DateTime @default(now())
+  expiresAt   DateTime
+
+  @@index([expiresAt])
+}
+
+model AmazonExclusion {
+  id          String   @id @default(cuid())
+  categoryId  String
+  asin        String
+  marketplace String
+  createdAt   DateTime @default(now())
+
+  @@unique([categoryId, asin, marketplace])
+}
+
+model AmazonLog {
+  id          String   @id @default(cuid())
+  adminId     String?
+  kind        String
+  status      String
+  message     String
+  asin        String?
+  categoryId  String?
+  marketplace String?
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+}

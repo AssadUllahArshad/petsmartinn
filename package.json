@@ -1,0 +1,55 @@
+{
+  "name": "petsmartinn",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "prisma generate && next build --webpack",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "node --env-file=.env --import tsx prisma/seed.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "lint": "eslint .",
+    "db:deploy": "prisma migrate deploy",
+    "admin:create": "node --env-file=.env --import tsx scripts/create-admin.ts",
+    "test:e2e": "playwright test",
+    "db:local": "node --import tsx scripts/local-postgres.ts",
+    "test:db": "node --conditions=react-server --env-file=.env --import tsx --test tests/*.integration.ts",
+    "amazon:expire": "node --conditions=react-server --env-file=.env --import tsx scripts/expire-amazon.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "bcryptjs": "^3.0.2",
+    "lucide-react": "^0.468.0",
+    "next": "16.3.8",
+    "next-auth": "^4.24.13",
+    "prisma": "^6.19.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.5",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "embedded-postgres": "^18.4.0-beta.17",
+    "eslint": "^9.39.5",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.71.0"
+  },
+  "overrides": {
+    "deepmerge-ts": "^8.0.2"
+  }
+}

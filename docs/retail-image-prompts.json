@@ -1,0 +1,86 @@
+{
+  "tool": "Built-in image_gen",
+  "purpose": "Original generated development imagery. Products and brands are fictional; replace with verified product media before launch.",
+  "assets": [
+    {
+      "name": "walk",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-de20293c-4de8-4c58-bd05-c68067c2b2a3.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: pet retail website hero photograph. A golden retriever wearing a plain forest green harness walking with its adult owner in a leafy park, candid warm daylight, premium editorial pet lifestyle photography, natural fur and realistic anatomy. Landscape composition, dog fully visible, owner partially visible, no text, no logos, no watermarks. Generate original photography, not a known brand campaign."
+    },
+    {
+      "name": "harness",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-fc768fb8-9465-4db0-ba2d-e44b67cd4e30.png",
+      "prompt": "Use case: product-mockup. Asset type: original fictional pet product photograph for a development storefront. Subject: plain sage green padded Y-shaped dog harness with black adjustable straps and metal leash ring. Clean realistic catalog photography on a warm white seamless studio background, full product completely visible centered with generous margins, natural soft shadow, finely detailed materials, square composition. No text, no logos, no brands, no watermarks. Not a real branded product."
+    },
+    {
+      "name": "leash",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-2445b489-d30b-48ad-a2a7-5a8e87bd3f51.png",
+      "prompt": "Use case: product-mockup. Asset type: original fictional pet product photograph for a development storefront. Subject: forest green braided rope dog leash, coiled neatly, with a metal clasp and comfortable loop handle. Clean realistic catalog photography on a warm white seamless studio background, full product completely visible centered with generous margins, natural soft shadow, finely detailed materials, square composition. No text, no logos, no brands, no watermarks. Not a real branded product."
+    },
+    {
+      "name": "hoodie",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-6ba2bfe8-a318-4ce2-bc63-81e84f3434fc.png",
+      "prompt": "Use case: product-mockup. Asset type: original fictional pet product photograph for a development storefront. Subject: terracotta cotton dog hoodie, shaped for a dog with two front leg sleeves, laid flat. Clean realistic catalog photography on a warm white seamless studio background, full product completely visible centered with generous margins, natural soft shadow, finely detailed materials, square composition. No text, no logos, no brands, no watermarks. Not a real branded product."
+    },
+    {
+      "name": "socks",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-845aa02b-bea6-41ca-b13b-c2c0d6e3259a.png",
+      "prompt": "Use case: product-mockup. Asset type: original fictional pet product photograph for a development storefront. Subject: set of four charcoal dog grip socks with visible rubber dotted soles. Clean realistic catalog photography on a warm white seamless studio background, full product completely visible centered with generous margins, natural soft shadow, finely detailed materials, square composition. No text, no logos, no brands, no watermarks. Not a real branded product."
+    },
+    {
+      "name": "perch",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-d4dafaa0-1363-42db-b1ef-a95249712cc7.png",
+      "prompt": "Use case: product-mockup. Asset type: original fictional pet product photograph for a development storefront. Subject: cream cushioned cat window perch on a simple pale wood frame. Clean realistic catalog photography on a warm white seamless studio background, full product completely visible centered with generous margins, natural soft shadow, finely detailed materials, square composition. No text, no logos, no brands, no watermarks. Not a real branded product."
+    },
+    {
+      "name": "mat",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-b6c22a4d-a9c9-4fb9-8d1a-54697dad0aa2.png",
+      "prompt": "Use case: product-mockup. Asset type: original fictional pet product photograph for a development storefront. Subject: quilted sage green rectangular dog travel mat folded at one corner. Clean realistic catalog photography on a warm white seamless studio background, full product completely visible centered with generous margins, natural soft shadow, finely detailed materials, square composition. No text, no logos, no brands, no watermarks. Not a real branded product."
+    },
+    {
+      "name": "wand",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-fc8983ce-cee4-4a52-b5a5-299f766b8c8d.png",
+      "prompt": "Use case: product-mockup. Asset type: original fictional pet product photograph for a development storefront. Subject: wooden handled cat toy wand with a cord and muted natural feather toy. Clean realistic catalog photography on a warm white seamless studio background, full product completely visible centered with generous margins, natural soft shadow, finely detailed materials, square composition. No text, no logos, no brands, no watermarks. Not a real branded product."
+    },
+    {
+      "name": "balm",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-ca929900-ded1-45e4-992b-b37fe2eec585.png",
+      "prompt": "Use case: product-mockup. Asset type: original fictional pet product photograph for a development storefront. Subject: small unlabeled metal tin of paw balm with open lid alongside. Clean realistic catalog photography on a warm white seamless studio background, full product completely visible centered with generous margins, natural soft shadow, finely detailed materials, square composition. No text, no logos, no brands, no watermarks. Not a real branded product."
+    },
+    {
+      "name": "dog",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-5d18c35a-1179-4832-8bb6-cd4b8b7f5b60.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: original pet retail category photograph. A relaxed golden retriever sitting in a bright cozy home beside a pale linen sofa, natural daylight. Premium editorial photography, realistic fur and anatomy, warm natural colors, balanced landscape composition with whole subject visible, no text, logos or watermark, no illustration."
+    },
+    {
+      "name": "cat",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-91572cfe-a72f-461c-910b-a5f3b281c72b.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: original pet retail category photograph. A beautiful short-haired tabby cat relaxing on a cream window seat in a bright cozy home, natural daylight. Premium editorial photography, realistic fur and anatomy, warm natural colors, balanced landscape composition with whole subject visible, no text, logos or watermark, no illustration."
+    },
+    {
+      "name": "clothing",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-c4b6ef79-6c68-4558-b664-9e901a584bee.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: original pet retail category photograph. A small terrier wearing a plain terracotta cotton dog hoodie walking in a garden, fully visible with realistic clothing fit. Premium editorial photography, realistic fur and anatomy, warm natural colors, balanced landscape composition with whole subject visible, no text, logos or watermark, no illustration."
+    },
+    {
+      "name": "paws",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-f97a41ab-32d3-4839-b94e-23a833648ab5.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: original pet retail category photograph. A senior Labrador standing naturally on a light oak floor wearing dark charcoal grip socks on its four paws, realistic fit and anatomy. Premium editorial photography, realistic fur and anatomy, warm natural colors, balanced landscape composition with whole subject visible, no text, logos or watermark, no illustration."
+    },
+    {
+      "name": "car",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-c43bd0d5-4cea-405f-b674-f915aa4ca22c.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: original pet retail category photograph. A medium sized dog sitting calmly in the rear seat of a parked car wearing a plain fitted chest harness attached to a short car restraint, professional pet lifestyle photograph, no safety certification claims. Premium editorial photography, realistic fur and anatomy, warm natural colors, balanced landscape composition with whole subject visible, no text, logos or watermark, no illustration."
+    },
+    {
+      "name": "guide",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-bc1c885c-1165-4202-99fd-532ddf138fad.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: original pet buying guide editorial photo. A close editorial photograph of an adult gently adjusting a plain sage green padded dog harness on a golden retriever in a garden, focus on comfortable fit, realistic hands and natural dog anatomy. Warm natural daylight, realistic fur and textures, landscape composition. No text, logos, brands, watermarks or illustrations."
+    },
+    {
+      "name": "journal",
+      "path": "/Users/ali/.codex/generated_images/01a10b4b-e629-7341-b8c4-c54d36527a5f/exec-3c833f27-9213-45a3-8f73-1f5daab0270f.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: original pet buying guide editorial photo. A beagle exploring a leafy woodland walking path with a plain leash loosely held by its owner just outside the frame, candid everyday pet photography, dog fully visible. Warm natural daylight, realistic fur and textures, landscape composition. No text, logos, brands, watermarks or illustrations."
+    }
+  ]
+}
